@@ -1,0 +1,1 @@
+angular.module('getEd', ['ui.router']);
