@@ -8,10 +8,14 @@ var mongoUri = 'mongodb://localhost/node-server-project';
 var adminController = require('./server-assets/controllers/adminProfileCtrl.js');
 var userController = require('./server-assets/controllers/userProfileCtrl.js');
 
+var passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
+
 
 mongoose.Promise = require('q').Promise;
 
 var app = express();
+
+app.use(passport.initialize());
 
 app.use(bodyParser.json());
 app.use(cors());
