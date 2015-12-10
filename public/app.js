@@ -11,7 +11,7 @@ angular.module('getEd', ['ui.router']).config(function($stateProvider, $urlRoute
 		controller: 'adminProfileCtrl'
 	})
 	.state('userProfile', {
-		url: '/userProfile',
+		url: '/myProfile',
 		templateUrl: 'templates/userProfileTmpl.html',
 		controller: 'userProfileCtrl'
 	})
