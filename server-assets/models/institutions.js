@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var institutionSchema = new mongoose.Schema({
-	institutionName: {type: String},
+	name: {type: String},
 	location: {type:String},
 });
 
