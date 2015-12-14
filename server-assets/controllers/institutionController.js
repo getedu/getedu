@@ -1,8 +1,10 @@
+
 var Institution = require('../models/institutions.js');
 
 module.exports = {
 	getInstitutions: function(req, res) {
-		Institution.find(req.query).exec().then(function(results) {
+		console.log(req.query.q);
+		Institution.find({institutionName: req.query.q}).exec().then(function(results) {
 			return res.json(results);
 		}).catch(function(err) {
 			return res.status(500).json(err);

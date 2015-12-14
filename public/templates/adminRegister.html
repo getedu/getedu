@@ -11,10 +11,8 @@
 </form>
 
 <div id="about" class="links">
-	<ul ng-repeat=" in breweries">
-		<li>
-			<a ui-sref="brewery({id: brewery.id})">{{brewery.name}}</a>
-			
+	<ul ng-repeat=" institution in institutions">
+		<li> {{institution.name}}
 		</li>
 	</ul>
 </div>

@@ -5,8 +5,11 @@ var q = require('q');
 var port = 8080;
 var mongoose = require('mongoose');
 var mongoUri = 'mongodb://localhost/node-server-project';
+
+//
 var adminController = require('./server-assets/controllers/adminProfileCtrl.js');
 var userController = require('./server-assets/controllers/userProfileCtrl.js');
+var institutionController = require('./server-assets/controllers/institutionController.js')
 
 var passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
 
@@ -31,7 +34,7 @@ app.get('/api/admin', adminController.getAdminPage);
 app.post('/api/admin', adminController.addAdminInstitution);
 app.put('/api/admin/:id', adminController.updateAdminPage);
 //Institution Search
-app.get('/api/institution', insitutionController.getInstitutions);
+app.get('/api/institutions', institutionController.getInstitutions);
 
 
 app.listen(port, function() {
