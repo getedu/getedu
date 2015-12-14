@@ -1,5 +1,3 @@
-Admin register page.
-
 <header class="jumbotron">
 	<div class="header">
 		<h1>Admin Register Page</h1>
@@ -9,4 +7,14 @@ Admin register page.
 <form ng-submit="getInstitutions(search)">
 		Search for a School: 
 		<input type="text" ng-model="search" placeholder="School Name"/>
+		<button type="submit">Submit</button>
 </form>
+
+<div id="about" class="links">
+	<ul ng-repeat=" in breweries">
+		<li>
+			<a ui-sref="brewery({id: brewery.id})">{{brewery.name}}</a>
+			
+		</li>
+	</ul>
+</div>
