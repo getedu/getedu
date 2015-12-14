@@ -30,6 +30,8 @@ app.put('/api/users/:id', userController.updateUserInfo);
 app.get('/api/admin', adminController.getAdminPage);
 app.post('/api/admin', adminController.addAdminInstitution);
 app.put('/api/admin/:id', adminController.updateAdminPage);
+//Institution Search
+app.get('/api/institution', insitutionController.getInstitutions);
 
 
 app.listen(port, function() {
