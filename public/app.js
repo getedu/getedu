@@ -34,6 +34,16 @@ angular.module('getEd', ['ui.router']).config(function($stateProvider, $urlRoute
 		url: '/institution',
 		templateUrl: 'templates/institutionTmpl.html',
 		controller: 'institutionCtrl'
+	})
+	.state('adminRegister', {
+		url: '/adminRegister',
+		templateUrl: 'templates/adminRegister.html',
+		controller: 'adminRegisterCtrl'
+	})
+	.state('userRegister', {
+		url: '/userRegister',
+		templateUrl: 'templates/userRegister.html',
+		controller: 'userRegisterCtrl.js'
 	});
 
 	$urlRouterProvider.otherwise('/home');
