@@ -19,11 +19,23 @@
 	</div>
 	<div>
 		Gender:
-		
+		<select name="gender" ng-model="user.gender">
+			<option value="">Please Select</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
 	</div>
 	<div>
 		Favorite Subject:
-		
+		<select name="favSubj" ng-model="user.favSubj">
+			<option value="">Please Select</option>
+			<option value="History">History</option>
+			<option value="Science">Science</option>
+			<option value="Math">Math</option>
+			<option value="Social Sciences">Social Sciences</option>
+			<option value="Language">Language</option>
+			<option value="Music">Music</option>
+		</select>
 	</div>
 	<div>
 		State:
