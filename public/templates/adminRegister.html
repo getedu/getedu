@@ -12,7 +12,47 @@
 
 <div id="about" class="links">
 	<ul ng-repeat=" institution in institutions">
-		<li> {{institution.name}}
-		</li>
+		<li ng-click="selectedInst"> {{institution.name}}</li>
 	</ul>
 </div>
+
+<form ng-submit="addAdminInfo()">
+	<div>
+		Institution Name:
+
+	</div>
+	<div>
+		Location:
+		
+	</div>
+	<div>
+		Student Count:
+		<input type="number" ng-model="admin.studentCount" placeholder="# of Students"/>
+	</div>
+	<div>
+		Average Class Size:
+		<input type="number" ng-model="admin.avgClassSize" placeholder="Avg. Class size"/>
+	</div>
+	<div>
+		Student/Teacher Ratio:
+		<input type="text" ng-model="admin.studentTeachRatio" placeholder="Example: 14:1"/>
+	</div>
+	<div>
+		Male: Female Ratio:
+		<input type="text" ng-model="admin.genderRatio" placeholder="Example: 45%:55%"/>
+	</div>
+	<div>
+		Type of Institution:
+
+	</div>
+	<div>
+		Top Subject: 
+
+	</div>
+	<div>
+		Financial Aid: 
+
+	</div>
+
+	<button type="submit">Submit Profile Info</button>
+</form>
