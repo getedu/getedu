@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var adminSchema = new mongoose.Schema({
+var institutionProfileSchema = new mongoose.Schema({
 	name: {type: String, required: true},
 	city: {type:String, required: true},
 	state: {type: String, required: true},
@@ -13,4 +13,4 @@ var adminSchema = new mongoose.Schema({
 	financialAid: {type: String, required: true, enum: ['Need-blind', 'Need-based']}
 });
 
-module.exports = mongoose.model('Admin', adminSchema);
+module.exports = mongoose.model('InstitutionProfile', institutionProfileSchema);

@@ -29,11 +29,13 @@ app.get('/api/users', userController.getUserInfo);
 app.post('/api/users', userController.addUser);
 app.put('/api/users/:id', userController.updateUserInfo);
 
+//User Institution Search
+// app.get();
+
 //Admin related calls
-app.get('/api/admin', adminController.getAdminPage);
-app.post('/api/admin', adminController.addAdminInstitution);
-app.put('/api/admin/:id', adminController.updateAdminPage);
-//Institution Search
+app.get('/api/institutionProfiles', adminController.getAdminPage);
+app.post('/api/institutionProfile', adminController.addAdminInstitution);
+app.put('/api/institutionProfile/:id', adminController.updateAdminPage);
 app.get('/api/institutions', institutionController.getInstitutions);
 
 
