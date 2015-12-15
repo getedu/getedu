@@ -12,38 +12,39 @@
 
 <div id="about" class="links">
 	<ul ng-repeat=" institution in institutions">
-		<li ng-click="selectedInst"> {{institution.name}}</li>
+		<li class="links"> {{institution.name}}</li>
+		<button ng-click="selectedInst">Select Institution</button>
 	</ul>
 </div>
 
-<form ng-submit="addAdminInfo()">
+<form ng-submit="addInstitutionInfo(selectedInst)">
 	<div>
 		Institution Name:
-
+		{{selectedInst.name}}
 	</div>
 	<div>
 		Location:
-		
+		{{selectedInst.location}}
 	</div>
 	<div>
 		Student Count:
-		<input type="number" ng-model="institutionProfile.studentCount" placeholder="# of Students"/>
+		<input type="number" ng-model="selectedInst.studentCount" placeholder="# of Students"/>
 	</div>
 	<div>
 		Average Class Size:
-		<input type="number" ng-model="institutionProfile.avgClassSize" placeholder="Avg. Class size"/>
+		<input type="number" ng-model="selectedInst.avgClassSize" placeholder="Avg. Class size"/>
 	</div>
 	<div>
 		Student/Teacher Ratio:
-		<input type="text" ng-model="institutionProfile.studentTeachRatio" placeholder="Example: 14:1"/>
+		<input type="text" ng-model="selectedInst.studentTeachRatio" placeholder="Example: 14:1"/>
 	</div>
 	<div>
 		Male: Female Ratio:
-		<input type="text" ng-model="institutionProfile.genderRatio" placeholder="Example: 45%:55%"/>
+		<input type="text" ng-model="selectedInst.genderRatio" placeholder="Example: 45%:55%"/>
 	</div>
 	<div>
 		Type of Institution:
-		<select name="type" ng-model="institutionProfile.type">
+		<select name="type" ng-model="selectedInst.type">
 			<option value="">Please Select</option>
 			<option value="4-year">4-Year</option>
 			<option value="2-year">2-Year</option>
@@ -53,7 +54,7 @@
 	</div>
 	<div>
 		Top Subject: 
-		<select name="topSubj" ng-model="institutionProfile.topSubj">
+		<select name="topSubj" ng-model="selectedInst.topSubj">
 			<option value="">Please Select</option>
 			<option value="History">History</option>
 			<option value="Science">Science</option>
@@ -65,7 +66,7 @@
 	</div>
 	<div>
 		Financial Aid: 
-		<select name="financialAid" ng-model="institutionProfile.financialAid">
+		<select name="financialAid" ng-model="selectedInst.financialAid">
 			<option value="">Please Select</option>
 			<option value="Need-blind">4-Year</option>
 			<option value="Need-based">2-Year</option>

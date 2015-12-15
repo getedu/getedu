@@ -7,4 +7,12 @@ angular.module('getEd').service('adminRegisterService', function($http) {
 			url: '/api/institutions' + query,
 		});
 	}
+
+	this.addInstitutionInfo = function(selectedInst) {
+		return $http({
+			method: 'POST',
+			url: '/api/institutionProfiles',
+			data: selectedInst
+		});
+	}
 });

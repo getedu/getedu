@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 
 var institutionProfileSchema = new mongoose.Schema({
 	name: {type: String, required: true},
-	city: {type:String, required: true},
-	state: {type: String, required: true},
+	location: {type:String, required: true},
+	// city: {type:String, required: true},
+	// state: {type: String, required: true},
 	type: {type:String, enum: ['4-Year', '2-Year', 'Bootcamp','Graduate'], required: true},
 	studentCount: {type:Number, required: true},
 	topSubj: {type: String, enum: ['History', 'Science', 'Math', 'Social Sciences', 'Language', 'Music'], required: true},

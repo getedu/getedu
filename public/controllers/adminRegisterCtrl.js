@@ -1,6 +1,6 @@
 angular.module('getEd').controller('adminRegisterCtrl', function($scope, adminRegisterService) {
 	
-	$scope.selectedInst = '';
+	$scope.selectedInst = {};
 
 	$scope.getInstitutions = function(search) {
 		adminRegisterService.getInstitutions(search).then(function(results) {
@@ -9,7 +9,9 @@ angular.module('getEd').controller('adminRegisterCtrl', function($scope, adminRe
 		});
 	}
 
-	$scope.addAdminInfo = function() {
-
+	$scope.addInstitutionInfo = function(selectedInst) {
+		adminRegisterService.addInstitutionInfo(selectedInst).then(function(results) {
+			console.log('Submissions Successful');
+		});
 	}
 });
