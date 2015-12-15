@@ -1,0 +1,11 @@
+<form ng-submit="getInstitutions(search)">
+		Search for a School: 
+		<input type="text" ng-model="search" placeholder="School Name"/>
+		<button type="submit">Submit</button>
+</form>
+
+<div id="about" class="links">
+	<ul ng-repeat=" institution in institutions">
+		<li ng-click="selectedInst"> {{institution.name}}</li>
+	</ul>
+</div>
