@@ -27,31 +27,50 @@
 	</div>
 	<div>
 		Student Count:
-		<input type="number" ng-model="admin.studentCount" placeholder="# of Students"/>
+		<input type="number" ng-model="institutionProfile.studentCount" placeholder="# of Students"/>
 	</div>
 	<div>
 		Average Class Size:
-		<input type="number" ng-model="admin.avgClassSize" placeholder="Avg. Class size"/>
+		<input type="number" ng-model="institutionProfile.avgClassSize" placeholder="Avg. Class size"/>
 	</div>
 	<div>
 		Student/Teacher Ratio:
-		<input type="text" ng-model="admin.studentTeachRatio" placeholder="Example: 14:1"/>
+		<input type="text" ng-model="institutionProfile.studentTeachRatio" placeholder="Example: 14:1"/>
 	</div>
 	<div>
 		Male: Female Ratio:
-		<input type="text" ng-model="admin.genderRatio" placeholder="Example: 45%:55%"/>
+		<input type="text" ng-model="institutionProfile.genderRatio" placeholder="Example: 45%:55%"/>
 	</div>
 	<div>
 		Type of Institution:
-
+		<select name="type" ng-model="institutionProfile.type">
+			<option value="">Please Select</option>
+			<option value="4-year">4-Year</option>
+			<option value="2-year">2-Year</option>
+			<option value="Bootcamp">Bootcamp</option>
+			<option value="Graduate">Graduate</option>
+		</select>
 	</div>
 	<div>
 		Top Subject: 
-
+		<select name="topSubj" ng-model="institutionProfile.topSubj">
+			<option value="">Please Select</option>
+			<option value="History">History</option>
+			<option value="Science">Science</option>
+			<option value="Math">Math</option>
+			<option value="Social Sciences">Social Sciences</option>
+			<option value="Language">Language</option>
+			<option value="Music">Music</option>
+		</select>
 	</div>
 	<div>
 		Financial Aid: 
-
+		<select name="financialAid" ng-model="institutionProfile.financialAid">
+			<option value="">Please Select</option>
+			<option value="Need-blind">4-Year</option>
+			<option value="Need-based">2-Year</option>
+			<option value="No Financial Aid">No Financial Aid</option>
+		</select>
 	</div>
 
 	<button type="submit">Submit Profile Info</button>
